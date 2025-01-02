@@ -8,6 +8,9 @@ import vueDevTools from "vite-plugin-vue-devtools";
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
   server: {
+    fs: {
+      allow: ["../", "./node_modules/primeicons/fonts"],
+    },
     port: 3000,
   },
   resolve: {
